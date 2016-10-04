@@ -1,18 +1,4 @@
-* README file for the Matlab codes to compute depth-dependent dynamic weakening properties.
-
-..................................................
-
-** CONTENT OF THIS FILE
-
-1  Installation
-2  What's in the box
-3  Usage
-  3.1  Flash heating vs depth
-  3.2  Thermal pressurisation vs depth
-4  Troubleshooting
-5  Referencing
-
-..................................................
+* Depth-dependent dynamic weakening properties
 
 ** Installation
 
@@ -21,26 +7,6 @@ Just copy all the codes in a single folder, and work from there; or you can add 
 The computations involving thermal pressurisation require an additional step: you need to download the water95 package from Peter Junglas (http://www.peter-junglas.de/fh/water95/index.html), and add the correspondiong folder (should be water95/) to your path.
 
 ** What's in the box ?
-
-The package contains the following files:
-
- [[FHfunction.m][FHfunctions.m]]
- [[Hardness_Olivine_T.txt]]
- [[Hardness_Qz_T.txt]]
- [[TPfunctions.m]]
- [[Thermal_properties_Qz_Olv.txt]]
- [[Thermal_properties_rocks.txt]]
- [[continental_claygouge.m]]
- [[continental_granite.m]]
- [[flashheatingsoap.m]]
- [[flashheatingsoap_G.m]]
- [[oceanic.m]]
- [[profile_FH.m]]
- [[profile_TP.m]]
- [[subduction.m]]
- [[subduction_lambda09.m]]
- [[visc_w.m]]
- [[waterproperties.m]]
 
 All .txt files correspond to rock/mineral properties data taken from the literature (which are then fitted and/or interpolated in the computations).
 
@@ -62,7 +28,7 @@ First, edit the file [[profile_TP.m]] and choose the geological context by uncom
 
 Then plots can easily be generated using the arrays =depth= and the generated parameters, for instance:
 
-#+begin_src octave
+#+begin_src matlab
 plot(pathavgd.soap.Lstar, -depth/1e3);
 xlabel('L^* (m));
 ylabel('depth (km)');
@@ -82,9 +48,11 @@ Nevertheless, we welcome all suggestions so write an email to us if you feel lik
 
 ** Referencing
 
-When using any part of the provided codes for your research, please refer to our paper (Brantut N. and J. D. Platt, Dynamic weakening and the depth dependence of earthquake faulting, M.~Y. Thomas, H.~S. Bhat,
-  and T.~M. Mitchell, eds, /Fault Zone Dynamic Processes: Evolution of Fault Properties During Seismic Rupture/, Geophys. Monogr.
-  Ser., American Geophysical Union, Washington, DC.; check the full reference in the published version of the paper. A pdf version of the paper can be accessed [[http://www.normalesup.org/~brantut/files/Brantut_Platt_AGUMonograph_accepted.pdf][here]]).
+When using any part of the provided codes for your research, please refer to our paper:
+
+Brantut N. and J. D. Platt, *Dynamic weakening and the depth dependence of earthquake faulting*, M.~Y. Thomas, H.~S. Bhat, and T.~M. Mitchell, eds, /Fault Zone Dynamic Processes: Evolution of Fault Properties During Seismic Rupture/, Geophys. Monogr. Ser., American Geophysical Union, Washington, DC.
+
+(check the full reference in the published version of the paper. A pdf version of the paper can be accessed [[http://www.normalesup.org/~brantut/files/Brantut_Platt_AGUMonograph_accepted.pdf][here]]).
 
 Of course, the codes are mostly a compendium of previously published formulae and datasets, so referring to the original papers might be needed. All the appropriate references are given both in the text of the paper, and as comments in the codes.
 
